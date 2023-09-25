@@ -1,0 +1,22 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Ferry&display=swap");
+
+.autorizText {
+  font-family: "Ferry", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  margin-left: 60px;
+}
+.authImg {
+  margin-left: 60px;
+}
+.authTxtAndImg {
+  display: flex;
+}
+.authTextAndImg {
+  width: 700px;
+}
+.authForms {
+  margin-left: 150px;
+}

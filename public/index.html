@@ -2,42 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header>
+      <div class="header">
+        <div class="logo">
+          <img
+            src="%PUBLIC_URL%/SGN_09_24_2022_1663968217400 1.png"
+            alt="logo"
+          />
+        </div>
+        <div class="main" id="main">Главная</div>
+        <script>
+          document
+            .getElementById("main")
+            .addEventListener("click", function () {
+              window.location.href = "/main";
+            });
+        </script>
+        <div class="price">Тарифы</div>
+        <div class="faq">FAQ</div>
+        <button class="login" id="registrationButton">
+          Зарегистрироваться
+        </button>
+        <img src="%PUBLIC_URL%/line1.png" alt="line1" />
+        <button class="btn-enter" id="loginButton">Войти</button>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        <script>
+          document
+            .getElementById("loginButton")
+            .addEventListener("click", function () {
+              window.location.href = "/registration";
+            });
+        </script>
+      </div>
+    </header>
+    <main>
+      <div id="root"></div>
+    </main>
+    <footer class="footer">
+      <div class="logoFooter">
+        <img src="%PUBLIC_URL%/logoFooter.png" alt="logoFooter" />
+      </div>
+      <div class="right-content">
+        <div class="adressFooter">
+          г. Москва, Цветной б-р, 40 <br />
+          +7 495 771 21 11 <br />
+          info@skan.ru
+        </div>
+        <div class="copyrightFooter">Copyright. 2022</div>
+      </div>
+    </footer>
   </body>
 </html>

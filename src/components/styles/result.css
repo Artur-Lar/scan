@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Ferry&display=swap");
+@font-face {
+  font-family: "Ferry";
+  src: url("./fonts/ferry_black.otf") format("opentype");
+}
+@import url("https://rsms.me/inter/inter.css");
+
+.findTxtImg {
+  display: flex;
+  margin-left: 60px;
+}
+.resultSoon {
+  font-family: "Ferry";
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  width: 510px;
+  padding-bottom: 35px;
+}
+.wait {
+  font-family: "Inter";
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  width: 445px;
+  padding-bottom: 125px;
+}
+.summary {
+  font-family: "Ferry";
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  padding-bottom: 10px;
+}
+.found {
+  color: #949494;
+  font-family: "Inter";
+  font-size: 18px;
+  letter-spacing: 0.36px;
+}
+.findImg {
+  padding-left: 215px;
+}
+.results {
+  display: flex;
+  height: 100px;
+}
