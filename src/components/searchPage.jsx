@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Folders from "./images/Folders.png";
 import Documents from "./images/Document.png";
 import rocket from "./images/rocket.png";
@@ -12,6 +12,7 @@ export default function SearchPage() {
   const [results, setResults] = useState([]);
   const dispatch = useDispatch();
   const [accessToken, setAccessToken] = useState(""); //  состояние для хранения токена
+  const navigation = useNavigate();
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
@@ -31,7 +32,8 @@ export default function SearchPage() {
     try {
       const data = await fetchSearchResults(formData, accessToken); // Используем сервис для выполнения запроса
       setResults([data]);
-      dispatch({ type: "SET_RESPONSE_DATA", payload: data });
+      dispatch({ type: "SET_RESPONSE_DATA", payload: [data] });
+      navigation("/result");
     } catch (error) {
       console.error(error);
       // Обработка ошибки, например, отображение сообщения пользователю
@@ -145,6 +147,7 @@ export default function SearchPage() {
               type="number"
               name="inn"
               placeholder="10 цифр"
+              value={7710137066}
             />
             <br />
             <label>Тональность</label>
@@ -225,7 +228,7 @@ export default function SearchPage() {
             </div>
             <button type="submit" className="searchBtn">
               Поиск
-              <Link to="/result">Поиск</Link>
+              {/* <Link to="/result">Поиск</Link> */}
             </button>
             <p className="nessesFields">* Обязательные к заполнению поля</p>
           </div>
@@ -233,37 +236,6 @@ export default function SearchPage() {
         <div>
           <img className="rocket" src={rocket} alt="rocket" />
         </div>
-      </div>
-      {/* Вывод результатов на странице */}
-      <div className="results" id="results">
-        {results.length !== 0 && (
-          <div>
-            {results.map((result) => (
-              <div key={result.histogramType}>
-                <h2>
-                  {result.histogramType === "totalDocuments"
-                    ? "Количество публикаций"
-                    : "Количество публикаций с риск-факторами"}
-                </h2>
-                {result.data.map((item) => {
-                  console.log(item.data, "item");
-                  return item.data.map((elem) => {
-                    return (
-                      <p key={elem.date}>
-                        Дата: {elem.date}, Количество публикаций: {elem.value}
-                      </p>
-                    );
-                  });
-                  // return (
-                  //   <p key={item.date}>
-                  //     Дата: {item.date}, Количество публикаций: {item.value}
-                  //   </p>
-                  // );
-                })}
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

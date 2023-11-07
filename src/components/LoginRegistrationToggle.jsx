@@ -51,7 +51,7 @@ const LoginRegistrationForm = () => {
       console.log("Токен:", token);
       console.log("Срок действия токена:", expireDate);
 
-      // Перенаправление на следующую страницу
+      // Перенаправление на следующую страницу. Сделать через ХУКИ
       window.location.href = "./searchPage";
 
       // Пример использования функции saveToken с accessToken и formData
