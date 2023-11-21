@@ -125,16 +125,18 @@ const LoginRegistrationForm = () => {
           Войти
         </button>
       </form>
-      <a href="*">Восстановить пароль</a>
-      <p>Войти через:</p>
+      <a className="a" href="*">
+        Восстановить пароль
+      </a>
+      <p className="enterWith">Войти через:</p>
       <div className="btns-enter">
-        <a href="www.google.com">
+        <a href="www.google.com" className="a">
           <img src={google} alt="google" />
         </a>
-        <a href="www.facebook.com">
+        <a href="www.facebook.com" className="a">
           <img src={facebook} alt="facebook" />
         </a>
-        <a href="www.yandex.com">
+        <a href="www.yandex.com" className="a">
           <img src={yandex} alt="yandex" />
         </a>
       </div>

@@ -7,7 +7,7 @@ import search from "./components/images/search.png";
 import guard from "./components/images/guard.png";
 import arrowLeft from "./components/images/arrowLeft.png";
 import arrowRight from "./components/images/arrowRight.png";
-import imgWMan from "./components/images/imgWMan.png";
+import imgWMan from "./components/images/imgMan.svg";
 import lamp from "./components/images/lamp.png";
 import target from "./components/images/target.png";
 import laptop from "./components/images/laptop.png";
@@ -48,7 +48,7 @@ const MainPage = () => {
   };
 
   return (
-    <div>
+    <div className="conteiner">
       <div className="textImg">
         <div className="textBtn">
           <div className="service">
@@ -62,7 +62,7 @@ const MainPage = () => {
             <button className="btn-request">Запросить данные</button>
           </Link>
         </div>
-        <div>
+        <div className="img1">
           <img src={mainImage} alt="mainImage" />
         </div>
       </div>
@@ -96,10 +96,11 @@ const MainPage = () => {
               <img className="lamp" src={lamp} alt="lamp" />
             </div>
           </div>
-          <div className="currentTarif">Текущий тариф</div>
+
           <div className="prices">
             <div className="beginner">799 &#8381;</div>
             <div className="oldPrice">1 200 &#8381;</div>
+            <div className="currentTarif">Текущий тариф</div>
           </div>
           <div className="installment">
             или 150 ₽/мес. при рассрочке на 24 мес.

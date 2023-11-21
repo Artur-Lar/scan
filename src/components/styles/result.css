@@ -5,9 +5,14 @@
 }
 @import url("https://rsms.me/inter/inter.css");
 
+.conteiner {
+  width: 90%;
+  margin: auto;
+  max-width: 1440px;
+}
 .findTxtImg {
   display: flex;
-  margin-left: 60px;
+  justify-content: space-between;
 }
 .resultSoon {
   font-family: "Ferry";
@@ -22,7 +27,6 @@
   font-size: 20px;
   letter-spacing: 0.4px;
   width: 445px;
-  padding-bottom: 125px;
 }
 .summary {
   font-family: "Ferry";
@@ -36,11 +40,63 @@
   font-family: "Inter";
   font-size: 18px;
   letter-spacing: 0.36px;
+  padding-bottom: 20px;
 }
 .findImg {
-  padding-left: 215px;
+  padding-left: 30%;
+  width: 100%;
 }
-.results {
+.tableForResults {
   display: flex;
-  height: 100px;
+  width: 90%;
+  height: auto;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid #029491;
+  overflow: hidden; /* Скрываем скроллбар для всей таблицы */
+}
+
+.rowForResults {
+  display: flex;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+.btnsAndResults {
+  display: flex;
+  margin-bottom: 40px;
+}
+/* .rowForResults .cellOfResult:last-child {
+  border-right: none;
+} */
+.next-button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  cursor: pointer;
+}
+.resultsHeader {
+  padding: 1% 2%;
+  background-color: #029491;
+  color: white;
+  font-family: "Inter";
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.cellOfResult {
+  width: 130px;
+  border-right: 2px solid #949494;
+  padding: 8px;
+}
+
+.textOfResult {
+  font-family: "Inter";
+  font-size: 18px;
+  letter-spacing: 0.72px;
+  text-align: center;
+  padding: 5%;
 }

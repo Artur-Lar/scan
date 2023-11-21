@@ -5,12 +5,15 @@
 }
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: auto;
+  width: 90%;
+}
+.header_navBtns {
+  display: flex;
 }
 .main {
-  padding-left: 400px;
   font-family: "Inter";
   font-size: 14px;
 }
@@ -24,8 +27,11 @@
   font-family: "Inter";
   font-size: 14px;
 }
+.header_loginAndRegistBtns {
+  align-items: center;
+  display: flex;
+}
 .login {
-  margin-left: 290px;
   border: none;
   background-color: white;
   opacity: 0.4;
@@ -44,18 +50,17 @@
 }
 .footer {
   background-color: #029491;
+  margin-top: 118px;
+}
+.footer-conteiner {
+  width: 90%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 118px;
 }
-
 .right-content {
   text-align: right;
-  padding-right: 45px;
-}
-.logoFooter {
-  padding-left: 60px;
 }
 .adressFooter {
   color: white;

@@ -64,7 +64,7 @@ form {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-a {
+.a {
   color: #5970ff;
   font-family: "Inter";
   font-size: 14px;
@@ -74,7 +74,7 @@ a {
   justify-content: center;
   margin-bottom: 30px;
 }
-p {
+.enterWith {
   color: #949494;
   font-family: "Inter";
   font-size: 16px;

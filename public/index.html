@@ -14,21 +14,25 @@
             alt="logo"
           />
         </div>
-        <div class="main" id="main">Главная</div>
-        <script>
-          document
-            .getElementById("main")
-            .addEventListener("click", function () {
-              window.location.href = "/main";
-            });
-        </script>
-        <div class="price">Тарифы</div>
-        <div class="faq">FAQ</div>
-        <button class="login" id="registrationButton">
-          Зарегистрироваться
-        </button>
-        <img src="%PUBLIC_URL%/line1.png" alt="line1" />
-        <button class="btn-enter" id="loginButton">Войти</button>
+        <div class="header_navBtns">
+          <div class="main" id="main">Главная</div>
+          <script>
+            document
+              .getElementById("main")
+              .addEventListener("click", function () {
+                window.location.href = "/main";
+              });
+          </script>
+          <div class="price">Тарифы</div>
+          <div class="faq">FAQ</div>
+        </div>
+        <div class="header_loginAndRegistBtns">
+          <button class="login" id="registrationButton">
+            Зарегистрироваться
+          </button>
+          <img src="%PUBLIC_URL%/line1.png" alt="line1" />
+          <button class="btn-enter" id="loginButton">Войти</button>
+        </div>
 
         <script>
           document
@@ -43,16 +47,18 @@
       <div id="root"></div>
     </main>
     <footer class="footer">
-      <div class="logoFooter">
-        <img src="%PUBLIC_URL%/logoFooter.png" alt="logoFooter" />
-      </div>
-      <div class="right-content">
-        <div class="adressFooter">
-          г. Москва, Цветной б-р, 40 <br />
-          +7 495 771 21 11 <br />
-          info@skan.ru
+      <div class="footer-conteiner">
+        <div class="logoFooter">
+          <img src="%PUBLIC_URL%/logoFooter.png" alt="logoFooter" />
         </div>
-        <div class="copyrightFooter">Copyright. 2022</div>
+        <div class="right-content">
+          <div class="adressFooter">
+            г. Москва, Цветной б-р, 40 <br />
+            +7 495 771 21 11 <br />
+            info@skan.ru
+          </div>
+          <div class="copyrightFooter">Copyright. 2022</div>
+        </div>
       </div>
     </footer>
   </body>
